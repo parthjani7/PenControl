@@ -1,0 +1,21 @@
+<p>Read long articles, follow sheet music or recipes, or page through an e-book without touching the screen. Long-press the S Pen button to turn on <b>Pen remote</b>. After that, each click of the pen can scroll, turn a page or run a recorded tap sequence in the app on screen.</p>
+
+<p><b>Features</b></p>
+<ul>
+<li><b>Pen remote:</b> choose what click, double-click and triple-click do.</li>
+<li><b>Smooth auto-scroll</b> at 20–1500 px/s, with no jumps or flings.</li>
+<li><b>Page turning</b> by a swipe or an edge tap every few seconds. The edge tap works in e-readers.</li>
+<li><b>App macros:</b> record taps, long-presses, swipes, Back and Home for one app, then replay them one step per click or all at once.</li>
+<li><b>Editable timing</b> between macro steps.</li>
+<li><b>Floating bar</b> with speed, reverse, jump, record and stop controls.</li>
+<li><b>Quick Settings tile</b> to start and stop scrolling.</li>
+<li>Scrolling stops when you touch the screen, switch apps or turn the screen off.</li>
+</ul>
+
+<p><b>Requirements</b></p>
+<p>A Samsung Galaxy phone with a Bluetooth S Pen that supports Air actions (for example the S23 Ultra), running Android 11 or newer.</p>
+
+<p><b>Accessibility service</b></p>
+<p>PenControl uses Android's accessibility service to perform the scroll and tap gestures, and to know which app is in front so it can pick that app's macro. It cannot read what is on screen. It has no internet permission and collects nothing.</p>
+
+<p>Setup steps are in the app and at https://github.com/parthjani7/PenControl#-phone-setup</p>
