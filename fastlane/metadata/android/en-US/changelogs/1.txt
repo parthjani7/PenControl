@@ -1,5 +1,0 @@
-First release.
-- Pen remote: click, double-click and triple-click actions
-- Smooth auto-scroll and page turning
-- Per-app tap macros with editable timing
-- Floating bar and Quick Settings tile
