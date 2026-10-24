@@ -1,0 +1,14 @@
+<resources>
+    <color name="page_bg">#111317</color>
+    <color name="card_bg">#1D2026</color>
+    <color name="text_secondary">#A8ABB3</color>
+    <color name="accent">#8AB4FF</color>
+    <color name="status_ok">#16301F</color>
+    <color name="status_ok_text">#81C995</color>
+    <color name="status_warn">#3A1C1A</color>
+    <color name="status_warn_text">#F2B8B5</color>
+    <color name="status_remote">#1E2547</color>
+    <color name="status_remote_text">#AFC2FF</color>
+    <color name="field_bg">#272B33</color>
+    <color name="text_primary">#ECEDEF</color>
+</resources>

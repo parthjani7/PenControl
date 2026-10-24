@@ -1,0 +1,436 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <!-- Header: title, status and tabs stay put while the page scrolls. -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingHorizontal="16dp"
+        android:paddingTop="16dp"
+        android:paddingBottom="4dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:paddingHorizontal="4dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="@string/app_name"
+                    android:textColor="@color/text_primary"
+                    android:textSize="26sp" />
+
+                <TextView
+                    style="@style/Hint"
+                    android:text="@string/tagline" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/info_app"
+                style="@style/InfoButton"
+                android:contentDescription="@string/more_info" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/status_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:background="@drawable/status_bg"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingStart="16dp"
+            android:paddingTop="8dp"
+            android:paddingEnd="8dp"
+            android:paddingBottom="8dp">
+
+            <TextView
+                android:id="@+id/status"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="sans-serif-medium"
+                android:textSize="14sp" />
+
+            <Button
+                android:id="@+id/toggle_remote"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="0dp"
+                android:paddingHorizontal="16dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/tab_track"
+            android:orientation="horizontal"
+            android:padding="4dp">
+
+            <TextView
+                android:id="@+id/tab_remote"
+                style="@style/Tab"
+                android:text="@string/tab_remote" />
+
+            <TextView
+                android:id="@+id/tab_scroll"
+                style="@style/Tab"
+                android:text="@string/tab_scroll" />
+
+            <TextView
+                android:id="@+id/tab_macros"
+                style="@style/Tab"
+                android:text="@string/tab_macros" />
+
+            <TextView
+                android:id="@+id/tab_setup"
+                style="@style/Tab"
+                android:text="@string/tab_setup" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/pages_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:clipToPadding="false"
+        android:paddingHorizontal="16dp"
+        android:paddingBottom="24dp"
+        android:scrollbarStyle="outsideOverlay">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- Remote tab -->
+            <LinearLayout
+                android:id="@+id/page_remote"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout style="@style/Card">
+
+                    <LinearLayout style="@style/CardHeader">
+
+                        <TextView
+                            style="@style/CardTitle"
+                            android:text="@string/section_pen" />
+
+                        <ImageView
+                            android:id="@+id/info_pen"
+                            style="@style/InfoButton"
+                            android:contentDescription="@string/more_info" />
+                    </LinearLayout>
+
+                    <TextView
+                        style="@style/Hint"
+                        android:text="@string/pen_short" />
+
+                    <TextView
+                        style="@style/Label"
+                        android:text="@string/long_press_label" />
+
+                    <RadioGroup
+                        android:id="@+id/long_press"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <RadioButton
+                            android:id="@+id/long_remote"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/long_remote" />
+
+                        <RadioButton
+                            android:id="@+id/long_scroll"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/long_scroll" />
+                    </RadioGroup>
+                </LinearLayout>
+
+                <LinearLayout style="@style/Card">
+
+                    <LinearLayout style="@style/CardHeader">
+
+                        <TextView
+                            style="@style/CardTitle"
+                            android:text="@string/section_clicks" />
+
+                        <ImageView
+                            android:id="@+id/info_clicks"
+                            style="@style/InfoButton"
+                            android:contentDescription="@string/more_info" />
+                    </LinearLayout>
+
+                    <TextView
+                        style="@style/Label"
+                        android:text="@string/click_label" />
+
+                    <FrameLayout style="@style/Field">
+
+                        <Spinner
+                            android:id="@+id/click_action"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:popupBackground="@drawable/card" />
+                    </FrameLayout>
+
+                    <TextView
+                        style="@style/Label"
+                        android:text="@string/double_click_label" />
+
+                    <FrameLayout style="@style/Field">
+
+                        <Spinner
+                            android:id="@+id/double_click_action"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:popupBackground="@drawable/card" />
+                    </FrameLayout>
+
+                    <TextView
+                        style="@style/Label"
+                        android:text="@string/triple_click_label" />
+
+                    <FrameLayout style="@style/Field">
+
+                        <Spinner
+                            android:id="@+id/triple_click_action"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:popupBackground="@drawable/card" />
+                    </FrameLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Scroll tab -->
+            <LinearLayout
+                android:id="@+id/page_scroll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout style="@style/Card">
+
+                    <LinearLayout style="@style/CardHeader">
+
+                        <TextView
+                            style="@style/CardTitle"
+                            android:text="@string/section_speed_title" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/speed_label"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-medium"
+                        android:textColor="@color/text_primary"
+                        android:textSize="15sp" />
+
+                    <SeekBar
+                        android:id="@+id/speed"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingVertical="12dp" />
+
+                    <TextView
+                        style="@style/Hint"
+                        android:text="@string/speed_hint" />
+                </LinearLayout>
+
+                <LinearLayout style="@style/Card">
+
+                    <LinearLayout style="@style/CardHeader">
+
+                        <TextView
+                            style="@style/CardTitle"
+                            android:text="@string/section_style" />
+
+                        <ImageView
+                            android:id="@+id/info_style"
+                            style="@style/InfoButton"
+                            android:contentDescription="@string/more_info" />
+                    </LinearLayout>
+
+                    <RadioGroup
+                        android:id="@+id/style"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <RadioButton
+                            android:id="@+id/style_continuous"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/style_continuous" />
+
+                        <RadioButton
+                            android:id="@+id/style_page_swipe"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/style_page_swipe" />
+
+                        <RadioButton
+                            android:id="@+id/style_page_tap"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/style_page_tap" />
+                    </RadioGroup>
+
+                    <TextView
+                        android:id="@+id/page_label"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="14dp"
+                        android:fontFamily="sans-serif-medium"
+                        android:textColor="@color/text_primary"
+                        android:textSize="15sp" />
+
+                    <SeekBar
+                        android:id="@+id/page_seconds"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingVertical="12dp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Macros tab -->
+            <LinearLayout
+                android:id="@+id/page_macros"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout style="@style/Card">
+
+                    <LinearLayout style="@style/CardHeader">
+
+                        <TextView
+                            style="@style/CardTitle"
+                            android:text="@string/section_macros" />
+
+                        <ImageView
+                            android:id="@+id/info_macros"
+                            style="@style/InfoButton"
+                            android:contentDescription="@string/more_info" />
+                    </LinearLayout>
+
+                    <TextView
+                        style="@style/Hint"
+                        android:text="@string/macros_short" />
+
+                    <TextView
+                        style="@style/Label"
+                        android:text="@string/macro_play_label" />
+
+                    <RadioGroup
+                        android:id="@+id/macro_play"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <RadioButton
+                            android:id="@+id/macro_step"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/macro_step" />
+
+                        <RadioButton
+                            android:id="@+id/macro_auto"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/macro_auto" />
+                    </RadioGroup>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/macro_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" />
+            </LinearLayout>
+
+            <!-- Setup tab -->
+            <LinearLayout
+                android:id="@+id/page_setup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout style="@style/Card">
+
+                    <LinearLayout style="@style/CardHeader">
+
+                        <TextView
+                            style="@style/CardTitle"
+                            android:text="@string/section_setup" />
+
+                        <ImageView
+                            android:id="@+id/info_setup"
+                            style="@style/InfoButton"
+                            android:contentDescription="@string/more_info" />
+                    </LinearLayout>
+
+                    <TextView
+                        style="@style/Hint"
+                        android:text="@string/setup_short" />
+
+                    <Button
+                        android:id="@+id/open_a11y"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="@string/open_a11y" />
+                </LinearLayout>
+
+                <LinearLayout style="@style/Card">
+
+                    <LinearLayout style="@style/CardHeader">
+
+                        <TextView
+                            style="@style/CardTitle"
+                            android:text="@string/section_options" />
+                    </LinearLayout>
+
+                    <CheckBox
+                        android:id="@+id/opt_floating"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:minHeight="44dp"
+                        android:text="@string/opt_floating" />
+
+                    <CheckBox
+                        android:id="@+id/opt_app_switch"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:minHeight="44dp"
+                        android:text="@string/opt_app_switch" />
+
+                    <CheckBox
+                        android:id="@+id/opt_toasts"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:minHeight="44dp"
+                        android:text="@string/opt_toasts" />
+                </LinearLayout>
+            </LinearLayout>
+        </FrameLayout>
+    </ScrollView>
+</LinearLayout>
