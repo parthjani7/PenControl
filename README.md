@@ -1,8 +1,8 @@
-# PenScroll
+# PenControl
 
 Hands-free scrolling and tapping in any app, controlled by the Galaxy S Pen button.
 
-PenScroll is an Android accessibility service. It turns S Pen button clicks into slow, steady
+PenControl is an Android accessibility service. It turns S Pen button clicks into slow, steady
 scrolling, page turns, or recorded tap sequences ("macros"). Use it to read long articles, follow
 sheet music or recipes, or page through an e-book with the pen in your hand.
 
@@ -49,20 +49,20 @@ copy in the other profile has its own accessibility switch, and Air actions may 
 
 ## Phone setup
 
-1. **Turn on Accessibility.** Open PenScroll, tap **Open Accessibility settings**, then go to
-   Installed apps → PenScroll → On.
+1. **Turn on Accessibility.** Open PenControl, tap **Open Accessibility settings**, then go to
+   Installed apps → PenControl → On.
    - Android blocks this at first for apps installed outside the Play Store. Go to App info → ⋮ →
      *Allow restricted settings*, then try again.
 2. **Turn on Air actions.** Go to Settings → Advanced features → S Pen → **Air actions** → On.
-3. **Pick PenScroll for long-press.** Set **Hold down Pen button to** to **PenScroll**.
+3. **Pick PenControl for long-press.** Set **Hold down Pen button to** to **PenControl**.
 4. **Give Air command notification access.** Go to Settings → Notifications → **Notification
    access** and allow **Air command**. Pen remote needs this.
-5. **Allow PenScroll's notifications** when it asks.
+5. **Allow PenControl's notifications** when it asks.
 
 Apps with their own Air actions, such as Camera, keep pen clicks for themselves. Turn those off in
-the Air actions screen if you want PenScroll to get the clicks in that app.
+the Air actions screen if you want PenControl to get the clicks in that app.
 
-Some antivirus apps warn about sideloaded apps that use Accessibility. PenScroll doesn't read
+Some antivirus apps warn about sideloaded apps that use Accessibility. PenControl doesn't read
 screen content and needs no internet access.
 
 ## How it works
@@ -71,19 +71,19 @@ screen content and needs no internet access.
 
 Samsung only lets third-party apps use the pen's long-press, which launches an app.
 
-- PenScroll's launcher icon opens an invisible activity.
+- PenControl's launcher icon opens an invisible activity.
 - If the launch comes from the home screen, the activity opens settings.
 - From anywhere else, the launch counts as a pen long-press.
 
 ### Clicks
 
-Single and double clicks reach PenScroll as media buttons:
+Single and double clicks reach PenControl as media buttons:
 
-1. While Pen remote is on, PenScroll holds a `MediaSession` in the playing state and posts a media
+1. While Pen remote is on, PenControl holds a `MediaSession` in the playing state and posts a media
    notification.
 2. Air actions sends remote clicks to the app that owns the active media notification. It sends
    play/pause for a click and "next" for a double-click.
-3. PenScroll plays half a second of silence so that it becomes the phone's media-button target
+3. PenControl plays half a second of silence so that it becomes the phone's media-button target
    ahead of any music app.
 4. There is no native triple-click. A click that comes soon after a double-click counts as one.
 
@@ -106,14 +106,14 @@ Macros are stored per app as JSON. Positions are saved as fractions of the scree
 
 ## Privacy
 
-PenScroll has no internet permission and collects nothing. The accessibility service only listens
+PenControl has no internet permission and collects nothing. The accessibility service only listens
 for window changes, to learn which app is in front. It cannot read window content
 (`canRetrieveWindowContent="false"`). Settings and macros stay in the app's private storage. Android's own device backup can include
 them.
 
 ## Disclaimer
 
-PenScroll was built with the help of Claude Opus 5.5, Anthropic's AI model. It is a personal
+PenControl was built with the help of Claude Opus 5.5, Anthropic's AI model. It is a personal
 project and is provided as is, with no guarantee or warranty of any kind. It injects touches into
 other apps, so use it at your own risk, especially in apps where an unintended tap matters. It is
 not affiliated with or endorsed by Samsung.

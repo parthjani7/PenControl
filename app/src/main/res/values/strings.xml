@@ -1,9 +1,9 @@
 <resources>
-    <string name="app_name">PenScroll</string>
+    <string name="app_name">PenControl</string>
     <string name="tagline">Control any app with the S Pen button.</string>
-    <string name="a11y_description">Lets PenScroll perform scroll, tap and swipe gestures in any app when you use the S Pen button, the Quick Settings tile or a recorded macro. It does not read screen content; it only notes which app is open, so it can stop scrolling when you switch apps and pick that app\'s macro.</string>
+    <string name="a11y_description">Lets PenControl perform scroll, tap and swipe gestures in any app when you use the S Pen button, the Quick Settings tile or a recorded macro. It does not read screen content; it only notes which app is open, so it can stop scrolling when you switch apps and pick that app\'s macro.</string>
     <string name="more_info">More info</string>
-    <string name="enable_service_first">Turn on PenScroll in Accessibility settings first</string>
+    <string name="enable_service_first">Turn on PenControl in Accessibility settings first</string>
 
     <!-- Quick Settings tile -->
     <string name="tile_label">Auto-scroll</string>
@@ -86,7 +86,7 @@
 
     <!-- Setup tab -->
     <string name="section_setup">One-time setup</string>
-    <string name="setup_short">PenScroll needs Accessibility access to scroll and tap for you.</string>
+    <string name="setup_short">PenControl needs Accessibility access to scroll and tap for you.</string>
     <string name="open_a11y">Open Accessibility settings</string>
     <string name="section_options">Options</string>
     <string name="opt_floating">Show floating controls</string>
@@ -94,11 +94,11 @@
     <string name="opt_toasts">Show status messages</string>
 
     <!-- Info popups -->
-    <string name="info_app_title">About PenScroll</string>
-    <string name="info_app">PenScroll lets the S Pen button scroll and tap in any app.\n\n• Long-press the pen button to turn Pen remote on.\n• Click, double-click or triple-click to scroll, turn pages or run a macro.\n• A floating bar shows what\'s happening and lets you adjust or stop.\n\nTouching the screen, switching apps or turning the screen off stops scrolling.</string>
-    <string name="info_pen">Samsung only lets other apps use the pen\'s long-press, so PenScroll uses it to turn Pen remote on.\n\nWhile Pen remote is on, PenScroll shows a media notification and Air actions sends your clicks to it as media buttons (click = play/pause, double-click = next). A click shortly after a double-click counts as a triple-click.\n\nYour music app\'s pen controls are paused meanwhile; play music once to hand them back. Turning the screen off, long-pressing again, or tapping \"Turn off\" in the notification ends Pen remote.\n\nApps with their own pen actions (e.g. Camera) keep the clicks for themselves: turn them off under Settings → Advanced features → S Pen → Air actions.</string>
+    <string name="info_app_title">About PenControl</string>
+    <string name="info_app">PenControl lets the S Pen button scroll and tap in any app.\n\n• Long-press the pen button to turn Pen remote on.\n• Click, double-click or triple-click to scroll, turn pages or run a macro.\n• A floating bar shows what\'s happening and lets you adjust or stop.\n\nTouching the screen, switching apps or turning the screen off stops scrolling.</string>
+    <string name="info_pen">Samsung only lets other apps use the pen\'s long-press, so PenControl uses it to turn Pen remote on.\n\nWhile Pen remote is on, PenControl shows a media notification and Air actions sends your clicks to it as media buttons (click = play/pause, double-click = next). A click shortly after a double-click counts as a triple-click.\n\nYour music app\'s pen controls are paused meanwhile; play music once to hand them back. Turning the screen off, long-pressing again, or tapping \"Turn off\" in the notification ends Pen remote.\n\nApps with their own pen actions (e.g. Camera) keep the clicks for themselves: turn them off under Settings → Advanced features → S Pen → Air actions.</string>
     <string name="info_clicks">• Start / stop auto-scroll: scrolls in the style and speed set on the Scroll tab.\n• Swipe one page: one swipe of about 60% of the screen per click.\n• Reverse direction: flips the scroll direction (or the direction the next click goes).\n• Jump to top / bottom: jumps in the current direction; afterwards the direction flips.\n• Faster / Slower: changes the speed (or the page interval).\n\nThe floating bar shows the current direction as an arrow.</string>
     <string name="info_style">• Continuous: a smooth drag at the chosen speed.\n• Page by page (swipe): one no-fling swipe every few seconds.\n• Page by page (tap edge): taps the right edge (left when going up) every few seconds, for e-readers.\n\nThe interval applies to the page styles. Start / stop auto-scroll, the Quick Settings tile and long-press (when set to scrolling) use this style.</string>
     <string name="info_macros">Recording\n1. Open the app and long-press the pen button to turn Pen remote on.\n2. Tap ⏺ on the floating bar.\n3. Each touch becomes a step: tap, long-press (hold ½ s) or swipe. It\'s also performed on the app, so you can move through its screens. Back and Home are on the toolbar.\n4. Tap Save.\n\nPlaying\nIn that app, long-press cycles: off → macro mode → scroll mode → off.\nClick = next step (or play / pause with auto-play), double-click = previous step, triple-click = back to step 1.\n\nA macro stays with its app until it finishes, so steps that open the camera keep working.\n\nWaits\nAuto-play waits before each step as long as you did while recording. Tap a step below to change its wait.</string>
-    <string name="info_setup">1. Accessibility → Installed apps → PenScroll → On.\n2. Settings → Advanced features → S Pen → Air actions → On.\n3. \"Hold down Pen button to\" → choose PenScroll.\n4. Settings → Notifications → Notification access → allow Air command.\n5. Allow PenScroll\'s notification permission when asked.\n\nIf Android blocks step 1 for a sideloaded app: App info → ⋮ → Allow restricted settings, then try again.</string>
+    <string name="info_setup">1. Accessibility → Installed apps → PenControl → On.\n2. Settings → Advanced features → S Pen → Air actions → On.\n3. \"Hold down Pen button to\" → choose PenControl.\n4. Settings → Notifications → Notification access → allow Air command.\n5. Allow PenControl\'s notification permission when asked.\n\nIf Android blocks step 1 for a sideloaded app: App info → ⋮ → Allow restricted settings, then try again.</string>
 </resources>

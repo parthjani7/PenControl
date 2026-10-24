@@ -8,7 +8,7 @@ import android.widget.Toast
 
 /**
  * Invisible entry point behind the launcher icon, which Air Actions launches for
- * "Hold down Pen button to" → PenScroll. A tap on the icon from the home screen opens
+ * "Hold down Pen button to" → PenControl. A tap on the icon from the home screen opens
  * settings; any other launch counts as a pen long-press. Finishes immediately.
  */
 class TriggerActivity : Activity() {

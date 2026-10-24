@@ -95,7 +95,7 @@ object Macros {
             val array = JSONArray(json)
             List(array.length()) { MacroStep.fromJson(array.getJSONObject(it)) }
         } catch (e: JSONException) {
-            Log.w("PenScroll", "Unreadable macro for $pkg", e)
+            Log.w("PenControl", "Unreadable macro for $pkg", e)
             emptyList()
         }
     }

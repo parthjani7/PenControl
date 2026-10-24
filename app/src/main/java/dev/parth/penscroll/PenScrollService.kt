@@ -144,7 +144,7 @@ class PenScrollService : AccessibilityService() {
      *
      * Air Actions turns remote clicks into media buttons for the app with the active media
      * notification (this needs Air command's notification access). So while this is on,
-     * PenScroll holds a media session with a media notification.
+     * PenControl holds a media session with a media notification.
      */
     fun setRemoteMode(on: Boolean) {
         if (remoteMode == on) return
@@ -407,7 +407,7 @@ class PenScrollService : AccessibilityService() {
     private var mediaSession: MediaSession? = null
 
     private fun startMediaSession() {
-        val session = MediaSession(this, "PenScroll")
+        val session = MediaSession(this, "PenControl")
         session.setCallback(object : MediaSession.Callback() {
             override fun onMediaButtonEvent(intent: Intent): Boolean {
                 val key = IntentCompat.getParcelableExtra(intent, Intent.EXTRA_KEY_EVENT, KeyEvent::class.java)
@@ -467,7 +467,7 @@ class PenScrollService : AccessibilityService() {
             track.play()
             handler.postDelayed(::releaseSilence, SILENCE, 1000)
         } catch (e: Exception) {
-            // Best effort: clicks still reach PenScroll when no other app holds media focus.
+            // Best effort: clicks still reach PenControl when no other app holds media focus.
             Log.w(TAG, "Couldn't play silence", e)
             releaseSilence()
         }
@@ -852,7 +852,7 @@ class PenScrollService : AccessibilityService() {
         private const val FLING_MS = 120L
         private const val FLING_GAP_MS = 60L
         private const val JUMP_FLINGS = 10
-        private const val TAG = "PenScroll"
+        private const val TAG = "PenControl"
         private const val CANCEL_GRACE_MS = 150L
         private const val TRIPLE_CLICK_MS = 1200L
         private const val LIFT_WAIT_MS = 300L

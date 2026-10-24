@@ -13,5 +13,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "PenScroll"
+rootProject.name = "PenControl"
 include(":app")
